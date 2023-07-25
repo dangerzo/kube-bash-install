@@ -7,7 +7,7 @@ UPLOAD_HAROBR_URL=$3
 DOWN_VERSION=`echo "${URL[0]}" | awk -F '[/:]' '{print $3}'`
 
 ### Docker Login
-docker login ${UPLOAD_HAROBR_URL} --username acloud --password @c0rnWks@2 > ./temp_docker_login_message
+docker login ${UPLOAD_HAROBR_URL} --username dangerzo --password password > ./temp_docker_login_message
 DOCKER_LOGIN_STATUS=`cat ./temp_docker_login_message`
 rm -rf ./temp_docker_login_message
 
