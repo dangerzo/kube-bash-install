@@ -1,7 +1,7 @@
 #!/bin/bash
 
 URLFILE=./url_list
-UPLOAD_HAROBR_URL="cube-regi-ent.acloud.run"
+UPLOAD_HAROBR_URL="dangerzo.harbor.url"
 
 URL=( $( cat $URLFILE ) )
 URL_LENGTH=${#URL[@]}
@@ -9,7 +9,7 @@ URL_LENGTH=${#URL[@]}
 DOWN_VERSION=`echo "${URL[0]}" | awk -F '[/:]' '{print $3}'`
 
 ### Docker Login
-docker login ${UPLOAD_HAROBR_URL} --username acloud --password @c0rnWks@2 > ./temp_docker_login_message
+docker login ${UPLOAD_HAROBR_URL} --username dangerzp --password password > ./temp_docker_login_message
 DOCKER_LOGIN_STATUS=`cat ./temp_docker_login_message`
 rm -rf ./temp_docker_login_message
 
